@@ -16,6 +16,7 @@ What you need is:
  - SAM yaml specification;
  - AWS SDK documentation for Lambda Function code;
 
+links:
 - [SAM specification](https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md)
 - [CloudFormation resource types](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html)
 - [CloudFormation instrinsict function](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference.html)
