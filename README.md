@@ -24,3 +24,4 @@ links:
 - [Policy Template](https://github.com/awslabs/serverless-application-model/blob/master/docs/policy_templates.rst)
 - [All policy Template](https://github.com/awslabs/serverless-application-model/blob/develop/examples/2016-10-31/policy_templates/all_policy_templates.yaml)
 - [All SAM policies Specifications](https://github.com/awslabs/serverless-application-model/blob/develop/samtranslator/policy_templates_data/policy_templates.json)
+- [Java and C# languages](https://github.com/awslabs/aws-sam-cli/blob/develop/docs/advanced_usage.rst)
