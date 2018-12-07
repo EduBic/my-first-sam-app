@@ -5,11 +5,11 @@ Taken from article: https://itnext.io/creating-aws-lambda-applications-with-sam-
 
 ### Main Commands
 
-sam package --template-file template.yml --output-template-file package.yml --s3-bucket my-bucket
+`sam package --template-file template.yaml --output-template-file package.yaml --s3-bucket test-sam-deploy-bucket`
 
-sam deploy --template-file package.yml --stack-name my-sam-application --capabilities CAPABILITY_IAM
+`sam deploy --template-file package.yaml --stack-name my-sam-application --capabilities CAPABILITY_IAM`
 
-### Usefull References
+### Useful References
 
 What you need is: 
  - CloudFormation yaml specification;
