@@ -1,0 +1,39 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Sample SAM Template for dotnetcore runtime
+
+Globals:
+    Function:
+        Timeout: 10
+
+Resources:
+  DotNetFunctionExample:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: DotNetFunction
+      CodeUri: src/DotNetFunction/bin/Release/netcore2.1/publish
+      Handler: DotNetFunction::DotNetFunction.Function::Handler
+      Runtime: dotnetcore2.1
+      Environment:
+        Variables:
+          PARAM1: VALUE
+      Events:
+        DotNetFunction:
+          Type: AWS::Serverless::Api
+          Properties:
+            Path: /
+            Method: GET
+
+Outputs:
+
+    ExampleApi:
+      Description: "API Gateway endpoint URL for Prod stage for Debugging Example function"
+      Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/DotNetCoreExample/"
+
+    ExampleFunction:
+      Description: "DotNet Example Lambda Function ARN"
+      Value: !GetAtt DotNetFunctionExample.Arn
+
+    ExampleFunctionIamRole:
+      Description: "Implicit IAM Role created for Dot Net Example function"
+      Value: !GetAtt DotNetFunctionExampleRole.Arn
